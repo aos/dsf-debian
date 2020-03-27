@@ -1,0 +1,16 @@
+Source: diff-so-fancy
+Section: perl
+Priority: optional
+Maintainer: Aos Dabbagh <aosdab@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/so-fancy/diff-so-fancy
+Vcs-Browser: https://github.com/so-fancy/diff-so-fancy
+
+Package: diff-so-fancy
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}, git
+Description: Makes git diffs human-readable
+ This package strives to make your diffs human-readable rather than
+ machine-readable. This helps improve code quality and helps you spot defects
+ faster.

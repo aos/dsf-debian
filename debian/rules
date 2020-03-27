@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	sed -i 's|^use lib .*$$|use lib "/usr/share/diff-so-fancy";|' diff-so-fancy
+	dh_auto_configure

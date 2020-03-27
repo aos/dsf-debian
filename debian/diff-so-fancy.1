@@ -1,0 +1,88 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2020 Aos Dabbagh <aosdab@gmail.com>
+.TH diff-so-fancy 1 "March 29 2020"
+.SH NAME
+diff-so-fancy - Good-lookin' diffs. Actually… nah… The best-lookin' diffs.
+.SH DESCRIPTION
+diff-so-fancy - strives to make your diffs readable instead of machine
+readable. This helps improve code quality and helps you spot defects faster.
+.SH USAGE
+.PP
+Configure git to use diff-so-fancy for all diff output:
+.IP
+.nf
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+.fi
+.SS Improved colors for the highlighted bits
+.PP
+The default Git colors are not optimal.
+The colors used for the screenshot above were:
+.IP
+.nf
+git config --global color.ui true
+
+git config --global color.diff-highlight.oldNormal    "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal    "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
+
+git config --global color.diff.meta       "11"
+git config --global color.diff.frag       "magenta bold"
+git config --global color.diff.commit     "yellow bold"
+git config --global color.diff.old        "red bold"
+git config --global color.diff.new        "green bold"
+git config --global color.diff.whitespace "red reverse"
+.fi
+.SH OPTIONS
+.SS markEmptyLines
+.PP
+Should the first block of an empty line be colored.
+(Default: true)
+.IP
+.nf
+git config --bool --global diff-so-fancy.markEmptyLines false
+.fi
+.SS changeHunkIndicators
+.PP
+Simplify git header chunks to a more human readable format.
+(Default: true)
+.IP
+.nf
+git config --bool --global diff-so-fancy.changeHunkIndicators false
+.fi
+.SS stripLeadingSymbols
+.PP
+Should the pesky \fB+\fP or \fB-\fP at line-start be removed.
+(Default: true)
+.IP
+.nf
+git config --bool --global diff-so-fancy.stripLeadingSymbols false
+.fi
+.SS useUnicodeRuler
+.PP
+By default, the separator for the file header uses Unicode line-drawing
+characters.
+If this is causing output errors on your terminal, set this to
+\fBfalse\fP to use ASCII characters instead.
+(Default: true)
+.IP
+.nf
+git config --bool --global diff-so-fancy.useUnicodeRuler false
+.fi
+.SS rulerWidth
+.PP
+By default, the separator for the file header spans the full width of
+the terminal.
+Use this setting to set the width of the file header manually.
+.IP
+.nf
+git config --global diff-so-fancy.rulerWidth 47 # git log's commit header width
+.fi
+.SH CONTRIBUTING
+.PP
+Pull requests are quite welcome, and should target the \fBnext\fP
+branch (\fIhttps://github.com/so-fancy/diff-so-fancy/tree/next\fP).
+We are also looking for any feedback or ideas on how to make
+diff-so-fancy even fancier.
+.SH LICENSE
+MIT
