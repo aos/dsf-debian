@@ -23,6 +23,8 @@ In order to build this package you will need the following packages:
 $ mkdir tarballs build
 ```
 2. Download latest release with `uscan --destdir tarballs`
+   (This might be broken, you can instead download the release tarball and
+   rename it to the appropriate name.)
 3. Make changes if necessary, and run `gbp dch`
 4. Run:
 ```
@@ -33,7 +35,7 @@ This will create a `source-only package`, and not write-out the `.buildinfo`
 (`-O`) flag. It also uses `sbuild` to make the package.
 (See https://bugs.launchpad.net/launchpad/+bug/1699763)
 
-3. Upload the changes file to PPA:
+5. Upload the changes file to PPA:
 ```
 $ dput ppa:aos1/diff-so-fancy build/diff-so-fancy_1.2.6-1ubuntu1_source.changes
 ```
