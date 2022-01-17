@@ -1,8 +1,9 @@
-diff-so-fancy (1.4.0-1ubuntu1) bionic; urgency=medium
+diff-so-fancy (1.4.2-1ubuntu1) bionic; urgency=medium
 
-  * Update to 1.4.0
+  * Update to 1.4.2
+  * Add impish support
 
- -- Aos Dabbagh <aosdab@gmail.com>  Thu, 13 May 2021 21:42:01 -0400
+ -- Aos Dabbagh <aosdab@gmail.com>  Mon, 17 Jan 2022 10:18:56 -0500
 
 diff-so-fancy (1.3.0-1ubuntu1) bionic; urgency=medium
 

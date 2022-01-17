@@ -1,2 +1,5 @@
 tarballs/*
 build/*
+
+!tarballs/.gitkeep
+!build/.gitkeep
