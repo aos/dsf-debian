@@ -1,3 +1,14 @@
+diff-so-fancy (1.4.4-1ubuntu1) bionic; urgency=medium
+
+  [ Daniel Snider ]
+  * Fix debian watch file matching syntax
+
+  [ Aos Dabbagh ]
+  * Update to 1.4.4
+  * Add support for mantic
+
+ -- Aos Dabbagh <aosdab@gmail.com>  Sat, 13 Jan 2024 12:18:50 -0500
+
 diff-so-fancy (1.4.2-1ubuntu1) bionic; urgency=medium
 
   * Update to 1.4.2
