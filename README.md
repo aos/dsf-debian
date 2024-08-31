@@ -1,7 +1,18 @@
-## Ubuntu Package for diff-so-fancy
+# Ubuntu Package for diff-so-fancy
 
 This repository holds the `debian/` files responsible for packaging
 [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy).
+
+## Installation
+
+To use this package:
+```
+sudo add-apt-repository ppa:aos1/diff-so-fancy
+sudo apt update
+sudo apt install diff-so-fancy
+```
+
+## Technical Details
 
 The PPA can be [found here](https://launchpad.net/~aos1/+archive/ubuntu/diff-so-fancy).
 
